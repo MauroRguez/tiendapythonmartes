@@ -15,7 +15,7 @@ while opcion != 5:
     opcion=int(input("Digita una opcion: "))
     if opcion == 1:
         print("Bienvenido a la creacion de tu lista de mercado")
-        
+        producto={}
         #creando claves y valores de un diccionario
         producto["id"]=5
         producto["nombre"]=input("Digita el nombre del producto: ")
@@ -33,9 +33,20 @@ while opcion != 5:
         
         
     elif opcion==2:
-        print("estoy en la 2")
+        #utilizando ciclos FOR en phyton para trevcorrer Listas
+        for productoSeleccionado in productos:
+            #que me muestre solo el nombre del producto
+            print(productoSeleccionado["nombre"])
     elif opcion==3:
-        print("estoy en la 3")
+        #preguntar a que prouducto vamos a editar
+        productoCambio=int(input("Digita el id del producto que deseas cambiar: "))
+        #recorrer la lista de productos 
+        for productoBuscado in productos:
+            if productoBuscado[id]==productoCambio:
+                print("Lo encontre")
+            else:
+                print("No lo encontre")
+          
     elif opcion==4:
         print("estoy en la 4")
     else:
